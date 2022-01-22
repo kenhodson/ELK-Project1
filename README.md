@@ -56,8 +56,6 @@ A summary of the access policies in place can be found in the table below.
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
 | Jump Box | Yes                 | 73.131.246.852    |
-|          |                     |                      |
-|          |                     |                      |
 
 ELK CONFIGURATION
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because it leaves less room for human error and decreases man hours needed if we were to have to set it up manually.
@@ -79,7 +77,7 @@ Filebeat and Metricbeat
 
 These Beats allow us to collect the following information from each machine:
 
-Filebeat is used to monitor the log files or locations that you specify, collects log events, and forwards them either to Elasticsearch or Logstash for indexing.{{INSERT EXAMPLE}}
+Filebeat is used to monitor the log files or locations that you specify, collects log events, and forwards them either to Elasticsearch or Logstash for indexing. During the process it would users logging in docker starting up and other OS events in Linux.
 
 Metricbeat helps monitor your servers by collecting metrics from the system and services running on the server. Such as CPU, memory or data related to services running on the VM. This is in effect aour webservers 1 & 2 use Metricbeat to collect logs on the servers.
 
