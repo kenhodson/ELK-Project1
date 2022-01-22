@@ -35,3 +35,35 @@ Filebeat: Monitors the log files or locations that you specify, collects log eve
 Metricbeat: Helps you monitor your servers by collecting metrics from the system and services running on the server. Such as CPU, memory or data related to services running on the VM.
 
 
+The configuration details of each machine may be found below.
+| Name     | Function | IP Address | Operating System |
+|----------|----------|------------|------------------|
+| Jump Box | Gateway  | 10.0.0.1   | Linux            | 
+| Web-1     | Webserver | 10.0.0.5   | Linux          |
+| Web-2     | Webserver | 10.0.0.6   | Linux          |
+| ELK-Server    | ELK   | 10.1.0.4   | Linux          |
+
+ACCESS POLICIES
+The machines on the internal network are not exposed to the public Internet. 
+
+Only the jumpbox machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
+ADD IP ADDRESS
+Machines within the network can only be accessed by SSH connection through port 22 from the Jumpbox machine.
+
+A summary of the access policies in place can be found in the table below.
+
+| Name     | Publicly Accessible | Allowed IP Addresses |
+|----------|---------------------|----------------------|
+| Jump Box | Yes/No              | 10.0.0.1 10.0.0.2    |
+|          |                     |                      |
+|          |                     |                      |
+
+ELK CONFIGURATION
+Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because it leaves less room for human error and decreases man hours needed if we were to have to set it up manually.
+
+The playbook implements the following tasks:
+
+
+
+
+
