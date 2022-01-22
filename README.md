@@ -62,7 +62,26 @@ ELK CONFIGURATION
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because it leaves less room for human error and decreases man hours needed if we were to have to set it up manually.
 
 The playbook implements the following tasks:
+*
+*
+*
+*
 
+{{{The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance}}
+
+TARGET MACHINE AND BEATS
+This ELK server is configured to monitor the following machines:
+Web-1 (10.0.0.5)
+Web-2 (10.0.0.6)
+
+We have installed the following Beats on these machines:
+Filebeat and Metricbeat
+
+These Beats allow us to collect the following information from each machine:
+
+Filebeat is used to monitor the log files or locations that you specify, collects log events, and forwards them either to Elasticsearch or Logstash for indexing.{{INSERT EXAMPLE}}
+
+Metricbeat helps monitor your servers by collecting metrics from the system and services running on the server. Such as CPU, memory or data related to services running on the VM. This is in effect aour webservers 1 & 2 use Metricbeat to collect logs on the servers.
 
 
 
