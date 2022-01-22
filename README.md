@@ -90,6 +90,12 @@ SSH into the control node and follow the steps below:
 - Copy the ELK playbook file to the Jumpbox (Docker container host)
 - Update the ELK file to include 
 - 
+- [webserver]
+- 10.0.0.5 ansible_python_interpreter=/usr/bin/python3
+- 10.0.0.6 ansible_python_interpreter=/usr/bin/python3
+- [ELK]
+- 10.1.0.4 ansible_python_interpreter=/usr/bin/python3
+- 
 - Run the playbook, and navigate to Kibana to check that the installation worked as expected.
 
 _TODO: Answer the following questions to fill in the blanks:_
