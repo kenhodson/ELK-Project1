@@ -18,7 +18,7 @@ This document contains the following details:
   - Machines Being Monitored
 - How to Use the Ansible Build
 
-DESCRIPTION OF THE TOPOLOGY
+DESCRIPTION OF THE TOPOLOGY:
 
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 Load balancing 
@@ -43,7 +43,7 @@ The configuration details of each machine may be found below.
 | Web-2     | Webserver | 10.0.0.6   | Linux          |
 | ELK-Server    | ELK   | 10.1.0.4   | Linux          |
 
-ACCESS POLICIES
+ACCESS POLICIES:
 The machines on the internal network are not exposed to the public Internet. 
 
 Only the jumpbox machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
@@ -57,7 +57,7 @@ A summary of the access policies in place can be found in the table below.
 |----------|---------------------|----------------------|
 | Jump Box | Yes                 | 73.131.246.852    |
 
-ELK CONFIGURATION
+ELK CONFIGURATION:
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because it leaves less room for human error and decreases man hours needed if we were to have to set it up manually.
 
 The playbook implements the following tasks:
@@ -69,7 +69,7 @@ The playbook implements the following tasks:
 * Enables docker to start when booted
 
 
-TARGET MACHINE AND BEATS
+TARGET MACHINE AND BEATS:
 This ELK server is configured to monitor the following machines:
 Web-1 (10.0.0.5)
 Web-2 (10.0.0.6)
@@ -83,24 +83,14 @@ Filebeat is used to monitor the log files or locations that you specify, collect
 
 Metricbeat helps monitor your servers by collecting metrics from the system and services running on the server. Such as CPU, memory or data related to services running on the VM. This is in effect aour webservers 1 & 2 use Metricbeat to collect logs on the servers.
 
-USING THE PLAYBOOK
-In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
+USING THE PLAYBOOK:
+In order to use the playbook, you will need to have Ansible already configured. Assuming you have such this done: 
 
 SSH into the control node and follow the steps below:
 - Copy the ELK playbook file to the Jumpbox (Docker container host)
 - Update the ELK file to include 
  
- [webserver]
- 10.0.0.5 ansible_python_interpreter=/usr/bin/python3
- 10.0.0.6 ansible_python_interpreter=/usr/bin/python3
- [ELK]
- 10.1.0.4 ansible_python_interpreter=/usr/bin/python3
+![image](https://user-images.githubusercontent.com/87491789/150894583-2ca26e5c-1a13-4d66-a6cb-ce73edc5838a.png)
  
 - Run the playbook, and navigate to Kibana to check that the installation worked as expected.
-
-_TODO: Answer the following questions to fill in the blanks:
-- Using the playbooks
-
-- You copy the Elk playbook, Metricbeat playbook and filebeat playbook to /etc/ansible/
-- You update Anisble and python interpreter
-- Run the playbook and you can navigate to the Public IP address (55.12.9.15) to make sure it is working.
+- You can navigate to the Public IP address (55.12.9.15) to make sure it is working.
