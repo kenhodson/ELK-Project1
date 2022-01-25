@@ -87,16 +87,19 @@ In order to use the playbook, you will need to have an Ansible control node alre
 SSH into the control node and follow the steps below:
 - Copy the ELK playbook file to the Jumpbox (Docker container host)
 - Update the ELK file to include 
-- 
-- [webserver]
-- 10.0.0.5 ansible_python_interpreter=/usr/bin/python3
-- 10.0.0.6 ansible_python_interpreter=/usr/bin/python3
-- [ELK]
-- 10.1.0.4 ansible_python_interpreter=/usr/bin/python3
-- 
+ 
+ [webserver]
+ 10.0.0.5 ansible_python_interpreter=/usr/bin/python3
+ 10.0.0.6 ansible_python_interpreter=/usr/bin/python3
+ [ELK]
+ 10.1.0.4 ansible_python_interpreter=/usr/bin/python3
+ 
 - Run the playbook, and navigate to Kibana to check that the installation worked as expected.
 
-_TODO: Answer the following questions to fill in the blanks:_
-- _Which file is the playbook? Where do you copy it?_
-- _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
+_TODO: Answer the following questions to fill in the blanks:
+- _Which file is the playbook? Where do you copy it?
+- Elk palybook
+- Filebeat
+- Metricbeat
+- _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?
 - _Which URL do you navigate to in order to check that the ELK server is running?
