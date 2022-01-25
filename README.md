@@ -61,10 +61,12 @@ ELK CONFIGURATION
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because it leaves less room for human error and decreases man hours needed if we were to have to set it up manually.
 
 The playbook implements the following tasks:
-* BREAKDOWN ELK YML FILE VIA WHAT EACH STEP DOES
-*
-*
-*
+* Installs Docker container
+* Installs python3
+* Installs Docker Module
+* Tells machine to use more memory RAM
+* Download and loanches Docker ELK container
+* Enables docker to start when booted
 
 
 TARGET MACHINE AND BEATS
@@ -97,9 +99,8 @@ SSH into the control node and follow the steps below:
 - Run the playbook, and navigate to Kibana to check that the installation worked as expected.
 
 _TODO: Answer the following questions to fill in the blanks:
-- _Which file is the playbook? Where do you copy it?
-- Elk palybook
-- Filebeat
-- Metricbeat
-- _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?
-- _Which URL do you navigate to in order to check that the ELK server is running?
+- Using the playbooks
+
+- You copy the Elk playbook, Metricbeat playbook and filebeat playbook to /etc/ansible/
+- You update Anisble and python interpreter
+- Run the playbook and you can navigate to the Public IP address (55.12.9.15) to make sure it is working.
